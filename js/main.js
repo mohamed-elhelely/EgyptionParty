@@ -51,3 +51,12 @@ setInterval(() => {
     $("#minuts").html(minuts +" m")
     $("#seconds").html(seconds +" s")
 },0 );
+    $(".val_message").keyup(function () {
+        var message = $(".val_message").val().length 
+        var calck = 100 - message
+        if (calck <= 0 ) {
+            $(".num").html("your available character finished")
+        } else {
+            $(".num").html(calck)
+        }
+    })
